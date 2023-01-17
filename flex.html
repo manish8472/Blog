@@ -1,0 +1,396 @@
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fjalla+One&family=Roboto+Slab&display=swap" rel="stylesheet">
+    <title>Grid</title>
+</head>
+
+<style>
+    *{
+        box-sizing: border-box;
+        margin: 0px;
+        padding:0px;
+        
+    }
+    body {
+        
+         
+    }
+
+    p {
+        font-size: large;
+    }
+
+    .navbar-logo {
+        background-color: antiquewhite;
+    }
+
+    .welcome-section {
+        text-align: center;
+        margin: auto;
+        display: block;
+    }
+
+    .Navbar {
+        background-color: black;
+        display: flex; 
+        /* position: sticky;   
+         overflow: hidden;
+        top: 0px;
+        width: 100%; */
+        /* padding: 1rem 0rem; */
+        justify-content: flex-start;
+    }
+
+    .Navbar a {
+        color: white;
+        margin: 1rem;
+        text-decoration: none;
+        
+    }
+
+    /* .sticky {
+        position: fixed;
+        top: 0;
+        width: 100%;
+    } */
+
+    .main-content {
+        display: flex;
+        margin: 0 1rem;
+        justify-content: center;
+        flex-wrap: nowrap;
+    }
+
+    .content-bar {
+        /* grid-auto-rows: min-content; */
+        /* background-color: bisque; */
+    }
+
+    .left-content {
+        display: block;
+        padding: 1rem;
+        height: 100vh;
+        height: fit-content;
+    }
+
+    .middle-content {
+        /* background-color: rgba(225, 215, 224, 0.924); */
+        padding: 1rem;
+        font-size: 1.2rem;
+        background-color: whitesmoke;
+        max-width: 900px;
+    }
+    .middle-content p , li{
+        font-size: 1.3rem;
+        font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+        word-spacing: 0.2rem;
+        line-height: 2rem;
+        margin-left: 2rem;
+        font-family: 'Roboto Slab', serif;
+    }
+
+    .right-content {
+        min-width: 300px;
+        height: fit-content;
+        position: relative;
+         position: -webkit-sticky; 
+        position: sticky;
+        top: 0rem;
+        /* background-color: #e9eef0; */
+        margin-left: 1rem;
+    }
+    h1{
+        margin: 2rem 0;
+        font-family: 'Fjalla One', sans-serif;
+
+    }
+    h2{
+        margin: 2rem 0;
+    }
+    h3{
+        margin: 1.5rem 0;
+    }
+    h4, h5{
+        margin: 1.5rem 0;
+        margin-left: 2rem;
+    }
+    .center{
+        margin-left: auto;
+        margin-right: auto;
+        text-align: center;
+    }
+    
+    li{
+        margin: 1rem;
+        margin-left: 2rem;
+    }
+
+    .footer{
+        background-color: rgb(177, 175, 175);
+        margin-bottom: 0;
+    }
+    .footer-logo{
+        width: 30%;
+        margin: auto;
+        text-align: center;
+    }
+    .footer-image{
+        width: 2rem;
+        height:2rem;
+        margin: 1rem;
+        
+    }
+    .footer-link{
+        margin: auto;
+        text-align: center;
+    }
+    .footer-link p{
+        display: inline;
+        margin: 0 2rem;
+    }
+
+    .profile-image{
+        width: 4rem;
+        height: 4rem;
+    }
+    .own-details{
+        margin: auto;
+        text-align: center;
+    }
+    .blog-link{
+        margin: 3rem 0rem;
+        background-color: rgb(253, 249, 249);
+        border-radius: 1rem;
+    }
+
+    
+    #first-blog{
+        display: flex;
+        color: rgb(28, 25, 25);
+        padding: 0.5rem;
+        border-radius: 1rem;
+    }
+
+    .text-part{
+        text-decoration: none;
+       
+    }
+    #first-blog:hover{
+        background-color: rgb(230, 227, 227);
+        box-shadow: 0.5rem 0.5rem 1rem rgb(35, 35, 35) ;
+    }
+    
+    .blog-link-image {
+        
+    }
+
+    .blog-link-image img{
+        width: 5rem;
+        height: 5rem;
+    }
+    
+
+    @media only screen and (max-width: 1000px) {
+        /* body{
+            box-sizing: border-box;
+            width: 100%;
+            height: 100%;
+        } */
+        .middle-content{
+            width: 800px;
+        }
+        .main-content{
+            flex-wrap: wrap;
+        }
+        .right-content{
+            width: 800px;
+            margin-left: 0rem;
+        }
+    }
+
+    @media only screen and (max-width: 600px) {
+        body{
+            box-sizing: border-box;
+            width: 100%;
+            height: 100%;
+        }
+        .Navbar{
+            padding: 1rem;
+        }
+        .middle-content{
+            width: 100%;
+        }
+        .main-content{
+            flex-wrap: wrap;
+            margin: 0rem 2%;
+        }
+        .right-content{
+            margin-left: 1rem;
+        }
+        h1{
+           font-size: large;
+        }
+        .middle-content p, li{
+            font-size: 1rem;
+        }
+    }
+    @media only screen and (max-width:350px) {
+        
+        .Navbar{
+            display: none;
+        }
+
+        .right-content{
+            min-width: 250px;
+            margin: 1%;
+        }
+       
+    }
+
+
+    
+
+</style>
+
+<body>
+    <div>
+        <div class="navbar-logo">
+            <h1 class="welcome-section">Welcome on My Blog Website</h1>
+        </div>
+
+        <div class="Navbar" id="navbar">
+            <a href="#home">Home</a>
+            <a href="#">Blog</a>
+            <a href="#">About me</a>
+            <a href="#">Contact</a>
+        </div>
+    </div>
+
+    <div class="main-content">
+        <!-- <div class="left-content content-bar">
+            <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Voluptates minima accusantium nisi cupiditate
+                illum. Ipsum ullam odio natus fugiat labore? Rerum quam unde deleniti consequatur, voluptatum blanditiis
+                exercitationem quo molestiae?</p>
+        </div> -->
+        <div class="middle-content content-bar">
+           <h1>Sorting Algorithms-</h1>
+           <h1> Properties, Pros, Cons and Comparisons</h1>
+
+           <p> <strong>Disclaimer:</strong>  Most of the content below will be cited. If any sentence is not cited, I want to clarify that this article is only for knowledge purpose and I will not be earning any money from it.</p>
+
+           <h2>Insertion Sort</h2>
+           
+            <h3>Properties:</h3>
+                <p> INSERTION-SORT can take different amounts of time to sort two input sequences of the same size depending on how nearly sorted they already are.
+                In INSERTION-SORT, the best case occurs if the array is already sorted.</p>
+               <h4> T [Best Case]= <strong>0(n)</strong></h4>
+
+               <p> If the array is in reverse sorted order i.e in decreasing order, INSERTION-SORT gives the worst case results.</p>
+                <h4>T [Worst Case]= <strong>θ(n²)</strong></h4>
+
+                <p>Average Case: When half the elements are sorted while half not
+                The running time of insertion sort therefore belongs to both <strong>Ω(n)</strong> and <strong>O(n²)</strong></p> 
+                <h3>Pros:</h3>
+                <p>For nearly-sorted data, it’s incredibly efficient (very near O(n) complexity)</p>
+                <p>It works in-place, which means no auxiliary storage is necessary i.e. requires only a constant amount O(1) of additional memory space
+                Efficient for (quite) small data sets.</p> 
+                <p>Stable, i.e. does not change the relative order of elements with equal keys</p> 
+                <h3>Cons:</h3>
+                <p>It is less efficient on list containing more number of elements
+                Insertion sort needs a large number of element shifts</p> 
+
+                <h2>Merge Sort:</h2>
+                <h3>Properties:</h3>
+                <ul>
+                    <li>Merge Sort’s running time is <strong>Ω(n log n)</strong> in the best-case,<strong>O(n log n)</strong>  in the worst-case, and Θ(n log n) in the average-case (when all permutations are equally likely).</li>
+                    <li>The space complexity of Merge sort is O(n). This means that this algorithm takes a lot of space and may slower down operations for the last data sets.</li>
+                </ul>
+                <h3>Pros:</h3>
+
+                <ul>
+                    <li>It is quicker for larger lists because unlike insertion it doesn't go through the whole list several times.</li>
+                    <li>The merge sort is slightly faster than the heap sort for larger sets.</li>
+                    <li> <strong>𝑂(𝑛𝑙𝑜𝑔𝑛)</strong>  worst case asymptotic complexity.</li>
+                    <li>Stable sorting algorithm.</li>
+                </ul>
+
+                <h3>Cons:</h3>
+                <ul>
+                    <li>Slower comparative to the other sort algorithms for smaller data sets.</li>
+                    <li>Marginally slower than quick sort in practice.</li>
+                    <li>Goes through the whole process even if the list is sorted.</li>
+                    <li>It uses more memory space to store the sub elements of the initial split list.</li>
+                    <li>It requires twice the memory of the heap sort because of the second array.</li>
+
+                </ul>
+
+           
+        </div>
+        <div class="right-content content-bar">
+            <div class="own-details">
+                <img src="profile.png" alt="" class="profile-image">
+                <h3>Manish Kumar</h3>
+                <div>3rd Year B.tech Student</div>
+            </div>
+            <h2 class="">More Blog</h2>
+            <div class="blog-link">
+                <a href="#">
+                    <div id="first-blog">
+                        <div class="text-part">
+                            <strong>
+                            <p>Dynamic Programming:</p>
+                            <p>Pron,Cons and Conclusion</p></strong>
+                        </div>
+                        <div class="blog-link-image">
+                            <img src="computerimage.png" alt="">
+                        </div>
+                        
+                    </div>
+                </a>
+                
+            </div>
+            
+        </div>
+    </div>
+    <footer>
+        <div class="footer">
+            <div class="footer-logo">
+                <a href="#"><img src="instagram.png" alt="instagram" class="footer-image"></a>
+                <a href="#"><img src="linkedin.png" alt="linkedin" class="footer-image"></a>
+                <a href="#"><img src="twitter.png" alt="twitter" class="footer-image"></a>
+                
+            </div>
+            <div class="footer-link">
+               <p><a href="#">privacy policy</a></p>
+               <p>All right Resevered</p>
+               </a>
+               <a href="#"></a>
+
+            </div>
+        </div>
+    </footer>
+    
+
+    <script>
+        const navbar = document.querySelector('#navbar');
+        let top = navbar.offsetTop;
+        function stickynavbar() {
+            if (window.scrollY >= top) {
+                navbar.classList.add('sticky');
+            } else {
+                navbar.classList.remove('sticky');
+            }
+        }
+        window.addEventListener('scroll', stickynavbar);
+
+    </script>
+
+</body>
+
+</html>
